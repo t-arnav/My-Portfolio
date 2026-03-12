@@ -100,9 +100,15 @@ http://localhost:3000
 📸 Portfolio Sections
 
 Hero Section – Introduction and profile
+
 About Section – Education and background
+
 Skills Section – Technical skillset
+
 Experience Section – Work and leadership experience
+
 Projects Section – Highlighted development projects
+
 Certifications Section – Achievements and certifications
+
 Contact Section – Professional contact details
