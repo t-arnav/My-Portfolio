@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaGraduationCap, FaCode, FaCloud, FaTools, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaChevronUp } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaGraduationCap, FaCode, FaCloud, FaTools, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaChevronUp, FaGithub, FaHandPaper, FaServer } from 'react-icons/fa';
 import './App.css';
 
 function App() {
@@ -394,6 +394,120 @@ function App() {
           </h2>
 
           <div className="grid md:grid-cols-1 gap-8">
+            {/* PMIS Portal Project */}
+            <div className="glass rounded-2xl p-8 card-hover" data-testid="project-pmis-card">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-400 mb-2" data-testid="project-pmis-title">
+                    PMIS – Placement Management Information System
+                  </h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://pmis-app.onrender.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition-colors"
+                      data-testid="project-pmis-live-link"
+                    >
+                      <FaExternalLinkAlt size={14} /> Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/t-arnav/PMIS"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition-colors"
+                      data-testid="project-pmis-github-link"
+                    >
+                      <FaGithub size={16} /> GitHub
+                    </a>
+                  </div>
+                </div>
+                <FaServer className="text-blue-400 text-3xl" />
+              </div>
+
+              <p className="text-gray-300 mb-6" data-testid="project-pmis-description">
+                A full-stack placement portal built end-to-end and deployed to production, serving as one of
+                my primary resume-anchor projects.
+              </p>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3 text-gray-200">Key Features:</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex gap-3" data-testid="project-pmis-feature-1">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Built a full-stack web application using Node.js, Express, MongoDB, and EJS templating</span>
+                  </li>
+                  <li className="flex gap-3" data-testid="project-pmis-feature-2">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Deployed the application live to Render with a connected MongoDB Atlas database</span>
+                  </li>
+                  <li className="flex gap-3" data-testid="project-pmis-feature-3">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Debugged and resolved production environment variable mismatches and MongoDB Atlas connection string issues during deployment</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {['Node.js', 'Express', 'MongoDB', 'EJS'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="skill-tag px-4 py-2 rounded-full text-sm font-medium"
+                    data-testid={`project-pmis-tech-${tech.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Hand Gesture Control Project */}
+            <div className="glass rounded-2xl p-8 card-hover" data-testid="project-gesture-control-card">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-400 mb-2" data-testid="project-gesture-control-title">
+                    Hand Gesture Control System
+                  </h3>
+                </div>
+                <FaHandPaper className="text-blue-400 text-3xl" />
+              </div>
+
+              <p className="text-gray-300 mb-6" data-testid="project-gesture-control-description">
+                A computer-vision project that lets you control your computer through hand gestures alone,
+                built and refined using OpenCV and MediaPipe.
+              </p>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3 text-gray-200">Key Features:</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex gap-3" data-testid="project-gesture-control-feature-1">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Used OpenCV and MediaPipe for real-time hand tracking and landmark detection via webcam</span>
+                  </li>
+                  <li className="flex gap-3" data-testid="project-gesture-control-feature-2">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Mapped recognized hand gestures to mouse movement and click actions</span>
+                  </li>
+                  <li className="flex gap-3" data-testid="project-gesture-control-feature-3">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>Extended gesture mappings to trigger Windows system-level controls</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {['Python', 'OpenCV', 'MediaPipe'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="skill-tag px-4 py-2 rounded-full text-sm font-medium"
+                    data-testid={`project-gesture-control-tech-${tech.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
             <div className="glass rounded-2xl p-8 card-hover" data-testid="project-shortyurl-card">
               <div className="flex items-start justify-between mb-4">
                 <div>
